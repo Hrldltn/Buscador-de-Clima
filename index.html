@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de climas</title>
+
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <video autoplay loop muted >
+        <source src="./video/Fondo.mp4" type="video/mp4">
+    </video>
+
+    <div class="container mx-auto">
+        <h1 id="titulo" class="text-4xl mt-10 text-white font-bold uppercase text-center">Buscador de Clima</h1>
+        <div class="max-w-lg mx-auto ">
+
+            <div class="p-6 mt-1">
+                <div class="flex justify-center"id="resultado">
+                    <p class="text-center text-white mt-6 font-bold">Agrega una ciudad y un pais <span class="icons"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg><svg class="h-8 w-8 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="5" />  <line x1="12" y1="1" x2="12" y2="3" />  <line x1="12" y1="21" x2="12" y2="23" />  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />  <line x1="1" y1="12" x2="3" y2="12" />  <line x1="21" y1="12" x2="23" y2="12" />  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg></span><p>
+                </div>
+            </div>
+            
+            <form id="formulario" class="mt-7 " action="#" method="POST">
+                <div class="mt-5">
+                    <input 
+                        type="text" 
+                        name="ciudad"
+                        id="ciudad"
+                        placeholder="Escribe tu Ciudad"
+                        class="w-full p-2 rounded"
+                    />
+                </div>
+                <div class="mt-5">
+                    <select 
+                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
+                        id="pais"
+                    >
+                        <option disabled selected value="">-- Seleccione --</option>
+                        <option value="AR">Argentina</option>
+                        <option value="CL">Chile</option>
+                        <option value="CO">Colombia</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="US">Estados Unidos</option>
+                        <option value="ES">España</option>
+                        <option value="MX">México</option>
+                        <option value="PE">Perú</option>
+                    </select>
+                </div>
+
+                <input 
+                    type="submit"
+                    class="mt-5 w-full bg-blue-500 p-3  uppercase font-bold cursor-pointer rounded"
+                    value="Obtener Clima" 
+                />
+
+            </form>
+
+     
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
